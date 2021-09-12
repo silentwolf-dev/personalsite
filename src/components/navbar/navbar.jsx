@@ -1,8 +1,7 @@
 import { Navbar, Nav } from "react-bootstrap";
 import { navitems } from './navItems'
 import { 
-   BrowserRouter as Router,
-   Link,
+   Link
 } from "react-router-dom";
 const NavbarComponent = ()=>{
    return(
@@ -22,7 +21,7 @@ const NavbarComponent = ()=>{
              <Nav>
                  {navitems.map((data)=>{
                      return(
-                        <Nav.Link as={Link} to={data.path}>
+                        <Nav.Link as={Link} key={data.id} to={data.path}>
                             {data.title}
                         </Nav.Link>
                      )
